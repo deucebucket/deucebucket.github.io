@@ -16,6 +16,15 @@ document.head.appendChild(printStyles);
 const printResume = document.querySelector(".print-resume");
 if (printResume) {
   printResume.style.display = "none";
+
+  const clankerHeading = Array.from(printResume.querySelectorAll("h3"))
+    .find(heading => heading.textContent?.includes("Clanker"));
+
+  const clankerParagraph = clankerHeading?.nextElementSibling;
+  if (clankerParagraph && !clankerParagraph.textContent.includes("zenodo")) {
+    clankerParagraph.textContent =
+      "Built experimental conversation-state and persistent agent-state systems around structured emotional/intent signals, mood/state persistence, feedback loops, trigger-driven behavior, and host integration rules. Published the VADUGWI method as a Zenodo preprint: doi.org/10.5281/zenodo.19383636.";
+  }
 }
 
 const root = document.documentElement;
