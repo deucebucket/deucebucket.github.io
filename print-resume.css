@@ -1,0 +1,126 @@
+.print-resume {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 0.45in;
+  }
+
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #121212 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 10.4pt;
+    line-height: 1.34;
+    overflow: visible !important;
+  }
+
+  body::before,
+  body::after,
+  .glow,
+  .site-header,
+  main,
+  .footer,
+  .skip {
+    display: none !important;
+  }
+
+  .print-resume {
+    display: block !important;
+    width: 100%;
+    max-width: 7.6in;
+    margin: 0 auto;
+  }
+
+  .print-resume h1,
+  .print-resume h2,
+  .print-resume h3 {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #111111;
+    letter-spacing: normal;
+    line-height: 1.1;
+  }
+
+  .print-header {
+    display: grid;
+    grid-template-columns: 1fr 2.35in;
+    gap: 0.25in;
+    align-items: start;
+    border-bottom: 3px solid #c65f13;
+    padding-bottom: 0.14in;
+    margin-bottom: 0.16in;
+  }
+
+  .print-header h1 {
+    font-size: 25pt;
+    margin: 0 0 0.04in;
+  }
+
+  .print-header p {
+    margin: 0;
+    font-size: 10.5pt;
+    color: #5b351c;
+    font-weight: 700;
+  }
+
+  .print-header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 8.6pt;
+    line-height: 1.35;
+    color: #333333;
+    text-align: right;
+  }
+
+  .print-resume section {
+    break-inside: avoid;
+    margin: 0.14in 0;
+  }
+
+  .print-resume h2 {
+    font-size: 10pt;
+    margin: 0 0 0.06in;
+    padding-bottom: 0.025in;
+    color: #9a3e0a;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    border-bottom: 1px solid #e5c7a8;
+  }
+
+  .print-resume h3 {
+    font-size: 10.4pt;
+    margin: 0 0 0.02in;
+  }
+
+  .print-resume p {
+    margin: 0;
+  }
+
+  .print-item {
+    break-inside: avoid;
+    margin-bottom: 0.09in;
+  }
+
+  .print-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.22in;
+  }
+
+  .print-resume ul {
+    margin: 0.02in 0 0;
+    padding-left: 0.18in;
+  }
+
+  .print-resume li {
+    margin: 0.015in 0;
+  }
+}
