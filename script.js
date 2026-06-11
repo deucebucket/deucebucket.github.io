@@ -1,7 +1,17 @@
+const mobileFixes = document.createElement("link");
+mobileFixes.rel = "stylesheet";
+mobileFixes.href = "mobile-fixes.css?v=2";
+document.head.appendChild(mobileFixes);
+
 const printStyles = document.createElement("link");
 printStyles.rel = "stylesheet";
-printStyles.href = "print-resume.css";
+printStyles.href = "print-resume.css?v=2";
 document.head.appendChild(printStyles);
+
+const printResume = document.querySelector(".print-resume");
+if (printResume) {
+  printResume.style.display = "none";
+}
 
 const root = document.documentElement;
 const savedTheme = localStorage.getItem("theme");
@@ -29,7 +39,15 @@ toggle?.addEventListener("click", () => {
 });
 
 document.querySelector("[data-print]")?.addEventListener("click", () => {
+  if (printResume) {
+    printResume.style.display = "block";
+  }
   window.print();
+  setTimeout(() => {
+    if (printResume) {
+      printResume.style.display = "none";
+    }
+  }, 500);
 });
 
 const year = document.querySelector("[data-year]");
