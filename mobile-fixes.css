@@ -1,0 +1,112 @@
+@media (max-width: 700px) {
+  :root,
+  :root[data-theme="light"] {
+    --ink: #22160c;
+    --paper: #fff4dd;
+    --paper-2: #f6dfba;
+    --panel: #fff0d2;
+    --panel-strong: #ffe7bd;
+    --muted: #4f3825;
+    --dim: #6a4a30;
+    --line: rgba(126, 60, 13, 0.35);
+    --line-strong: rgba(126, 60, 13, 0.62);
+    --orange: #c2410c;
+    --orange-soft: #b9470b;
+    --shadow: 0 12px 28px rgba(94, 52, 18, 0.18);
+  }
+
+  body {
+    background:
+      linear-gradient(180deg, #fff4dd 0%, #f4d7ab 100%) !important;
+    color: var(--ink) !important;
+  }
+
+  body::before {
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+  }
+
+  body::after {
+    display: none;
+  }
+
+  .site-header {
+    position: relative;
+    top: 0;
+    margin-top: 0.5rem;
+    background: #ffe7bd !important;
+    color: var(--ink) !important;
+    box-shadow: 5px 5px 0 rgba(126, 60, 13, 0.2);
+    backdrop-filter: none;
+  }
+
+  nav a,
+  .theme-toggle {
+    color: #5a351e !important;
+  }
+
+  nav a:hover,
+  .theme-toggle:hover {
+    color: #1b1008 !important;
+  }
+
+  .hero {
+    padding-top: 1.5rem;
+  }
+
+  .profile-card,
+  .panel,
+  .card,
+  .project,
+  .skills {
+    background: #fff0d2 !important;
+    color: var(--ink) !important;
+    border-color: rgba(126, 60, 13, 0.36) !important;
+    box-shadow: 4px 4px 0 rgba(126, 60, 13, 0.16) !important;
+    backdrop-filter: none !important;
+  }
+
+  .timeline > div {
+    background: #fff0d2 !important;
+    color: var(--ink) !important;
+    border-left-color: var(--orange) !important;
+  }
+
+  .muted,
+  .lede,
+  .card p,
+  .project p,
+  .timeline p,
+  .resume-main > p,
+  .contact p:not(.section-kicker),
+  .section-heading p:last-child,
+  .intro p:last-child {
+    color: #4f3825 !important;
+    opacity: 1 !important;
+  }
+
+  .eyebrow,
+  .section-kicker,
+  .small-label,
+  .project-top span,
+  .number {
+    color: #9a3412 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  dt,
+  dd {
+    color: #1b1008 !important;
+  }
+
+  .chips span {
+    color: #4f3825 !important;
+    background: rgba(255, 255, 255, 0.38) !important;
+  }
+
+  .print-resume {
+    display: none !important;
+  }
+}
