@@ -1,0 +1,18 @@
+/* TEAM */
+
+Name: Jerry Mares
+Handle: DeuceBucket
+Site: https://deucebucket.github.io
+GitHub: https://github.com/deucebucket
+Hugging Face: https://huggingface.co/deucebucket
+
+/* SITE */
+
+Purpose: Personal portfolio and résumé for Jerry Mares, building publicly as DeuceBucket.
+Tone: Humble, practical, first-principles, public-learning focused.
+Built with: Plain HTML, CSS, and JavaScript on GitHub Pages.
+
+/* NOTES */
+
+This site intentionally avoids linking private repositories or internal metrics pages.
+The printable résumé is embedded in the page and shown only in print/PDF mode.
