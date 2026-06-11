@@ -1,3 +1,8 @@
+const visualPolish = document.createElement("link");
+visualPolish.rel = "stylesheet";
+visualPolish.href = "visual-polish.css?v=3";
+document.head.appendChild(visualPolish);
+
 const mobileFixes = document.createElement("link");
 mobileFixes.rel = "stylesheet";
 mobileFixes.href = "mobile-fixes.css?v=2";
