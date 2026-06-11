@@ -1,3 +1,8 @@
+const printStyles = document.createElement("link");
+printStyles.rel = "stylesheet";
+printStyles.href = "print-resume.css";
+document.head.appendChild(printStyles);
+
 const root = document.documentElement;
 const savedTheme = localStorage.getItem("theme");
 const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
