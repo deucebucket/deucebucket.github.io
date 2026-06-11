@@ -1,0 +1,200 @@
+/* Final readability + cohesion pass. Loaded after the main CSS. */
+
+.print-resume {
+  display: none !important;
+}
+
+:root {
+  --readable-panel: rgba(33, 22, 14, 0.96);
+  --readable-panel-strong: rgba(43, 27, 16, 0.98);
+  --readable-text: #fff3df;
+  --readable-muted: #efd0a7;
+}
+
+:root[data-theme="light"] {
+  --readable-panel: #fff0d2;
+  --readable-panel-strong: #ffe6b7;
+  --readable-text: #1b1008;
+  --readable-muted: #4f3825;
+}
+
+.profile-card,
+.panel,
+.card,
+.project,
+.skills,
+.timeline > div {
+  background: var(--readable-panel) !important;
+  color: var(--readable-text) !important;
+  border-color: var(--line-strong) !important;
+  backdrop-filter: none !important;
+}
+
+.panel,
+.profile-card,
+.skills {
+  background: var(--readable-panel-strong) !important;
+}
+
+.lede,
+.muted,
+.card p,
+.project p,
+.timeline p,
+.resume-main > p,
+.contact p:not(.section-kicker),
+.section-heading p:last-child,
+.intro p:last-child {
+  color: var(--readable-muted) !important;
+  opacity: 1 !important;
+}
+
+h1,
+h2,
+h3,
+dt,
+dd {
+  color: var(--readable-text) !important;
+}
+
+.project-top a,
+.button,
+.theme-toggle {
+  color: var(--readable-text) !important;
+}
+
+:root[data-theme="light"] .project-top a,
+:root[data-theme="light"] .button,
+:root[data-theme="light"] .theme-toggle,
+:root[data-theme="light"] h1,
+:root[data-theme="light"] h2,
+:root[data-theme="light"] h3,
+:root[data-theme="light"] dt,
+:root[data-theme="light"] dd {
+  color: #1b1008 !important;
+}
+
+.site-header {
+  background: var(--readable-panel-strong) !important;
+  color: var(--readable-text) !important;
+  backdrop-filter: none !important;
+}
+
+:root[data-theme="light"] .site-header {
+  background: #ffe6b7 !important;
+  color: #1b1008 !important;
+}
+
+nav a {
+  color: var(--readable-muted) !important;
+}
+
+:root[data-theme="light"] nav a {
+  color: #5a351e !important;
+}
+
+@media (max-width: 700px) {
+  :root,
+  :root[data-theme="light"] {
+    --readable-panel: #fff0d2;
+    --readable-panel-strong: #ffe6b7;
+    --readable-text: #1b1008;
+    --readable-muted: #4f3825;
+    --ink: #1b1008;
+    --muted: #4f3825;
+    --dim: #6a4a30;
+    --orange-soft: #9a3412;
+  }
+
+  body {
+    background: linear-gradient(180deg, #fff4dd 0%, #f4d7ab 100%) !important;
+    color: #1b1008 !important;
+  }
+
+  body::after {
+    display: none !important;
+  }
+
+  body::before {
+    opacity: 0.10 !important;
+    mix-blend-mode: multiply !important;
+  }
+
+  .site-header {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 0.5rem !important;
+    padding: 0.7rem !important;
+    gap: 0.7rem !important;
+    box-shadow: 4px 4px 0 rgba(126, 60, 13, 0.18) !important;
+  }
+
+  .brand-mark {
+    width: 2.15rem !important;
+    height: 2.15rem !important;
+    box-shadow: 4px 4px 0 rgba(126, 60, 13, 0.22) !important;
+  }
+
+  nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.35rem 0.55rem !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  nav a,
+  .theme-toggle {
+    min-height: 2.35rem !important;
+    padding: 0.42rem 0.55rem !important;
+    background: rgba(255, 255, 255, 0.24) !important;
+    border: 1px solid rgba(126, 60, 13, 0.22) !important;
+    color: #4a2a15 !important;
+  }
+
+  .hero {
+    padding-top: 1.6rem !important;
+    gap: 1.1rem !important;
+  }
+
+  h1 {
+    font-size: clamp(2.45rem, 14vw, 4.2rem) !important;
+    max-width: 11ch !important;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 9vw, 3.1rem) !important;
+  }
+
+  .section {
+    padding: 3rem 0 !important;
+  }
+
+  .panel,
+  .card,
+  .project,
+  .skills,
+  .timeline > div {
+    box-shadow: 4px 4px 0 rgba(126, 60, 13, 0.14) !important;
+  }
+
+  .timeline > div {
+    border-left-width: 5px !important;
+  }
+
+  .chips span {
+    color: #4f3825 !important;
+    background: rgba(255, 255, 255, 0.42) !important;
+    border-color: rgba(126, 60, 13, 0.24) !important;
+  }
+
+  .print-resume {
+    display: none !important;
+  }
+}
+
+@media print {
+  .print-resume {
+    display: block !important;
+  }
+}
